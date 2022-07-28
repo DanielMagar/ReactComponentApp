@@ -24,13 +24,6 @@ const MultiCheckbox = () => {
     );
     setCheckedState(updatedCheckedState);
 
-    // setCheckedState((state) => {
-    //   return state;
-    // });
-
-    // const truecount = checkedState.filter(Boolean).length;
-    // console.log("truecount", truecount);
-
     if (updatedCheckedState.every((element) => element === true)) {
       setIsChecked(!isChecked);
     } else {

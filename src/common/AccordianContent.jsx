@@ -10,19 +10,11 @@ const AccordianContent = (props) => {
           onClick={(e) => setIsAcrd(!isAcrd)}
         >
           <div> {props.data.topic}</div>
-          <div className="cursor-pointer">
-            <i
-              className={`${
-                isAcrd ? "bx bx-minus" : "bx bx-plus"
-              } ease-in-out duration-300`}
-            ></i>
+          <div className="cursor-pointer ">
+            <i className={`${isAcrd ? "bx bx-minus" : "bx bx-plus"} `}></i>
           </div>
         </div>
-        {isAcrd && (
-          <div className="p-5 border ease-in-out duration-300">
-            {props.data.content}
-          </div>
-        )}
+        {isAcrd && <div className="p-5 border">{props.data.content}</div>}
       </div>
     </>
   );

@@ -31,7 +31,7 @@ export const Dropdown = () => {
         </div>
       </div>
       {isActive && (
-        <div className="h-40 border border-collapse p-5 overflow-y-auto ">
+        <div className="h-40 border border-collapse p-5 overflow-y-auto transition duration-[1s] ease-out">
           {myarr.map((data, idx) => (
             <div
               className="p-2 hover:bg-gray-100 cursor-pointer"

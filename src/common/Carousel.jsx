@@ -32,9 +32,32 @@ const Carousel = ({ children }) => {
       return state;
     });
   }, [activeIndex]);
+
+  // pause carousel on mouse hover
+  const [paused, setPaused] = useState(false);
+  // Setting automatic slide func
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!paused) {
+        updateIndex(activeIndex + 1);
+      }
+    }, 2000);
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+  }, [activeIndex, paused]);
   return (
     <>
-      <div className="overflow-hidden relative">
+      <div className="flex">
+        {/* <div className="text-[18px]">Carousel</div> */}
+      </div>
+      <div
+        className="overflow-hidden relative"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
         <div className="absolute top-0 bottom-0 w-20 text-center  left-0 z-50  hover:bg-gradient-to-r from-[#00000067] to-[#0000002d] hover:transition-all duration-[0.3s]">
           <div className="h-full w-full flex justify-center items-center">
             <i
@@ -64,8 +87,10 @@ const Carousel = ({ children }) => {
           {React.Children.map(children, (child, index) => {
             return (
               <button
-                className={`p-2 rounded-[80%] text-white active:bg-purple-500 ${
-                  index === activeIndex ? "border-2 bg-purple-500" : "bg-white"
+                className={`p-[7px] rounded-[80%] text-white active:bg-purple-700 ${
+                  index === activeIndex
+                    ? "border-[1px] bg-purple-700"
+                    : "bg-white"
                 } justify-center items-center`}
                 onClick={() => updateIndex(index)}
               >
