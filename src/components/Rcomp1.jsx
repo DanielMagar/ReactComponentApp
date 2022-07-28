@@ -3,6 +3,7 @@ import Accordian from "../common/Accordian";
 import { Dropdown } from "../common/Dropdown";
 import DropdownWithSearch from "../common/DropdownWithSearch";
 import MultiCheckbox from "../common/MultiCheckbox";
+import "boxicons";
 
 const Rcomp1 = () => {
   return (

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import "boxicons";
 
 export const CarouselItem = ({ children, width }) => {
   return (
@@ -18,16 +19,38 @@ const Carousel = ({ children }) => {
 
   // updating index for updating activeIndex state value to activate translate into 0, 100 and 200 respectively
   const updateIndex = (newIndex) => {
+    console.log("checking the new index", newIndex);
     if (newIndex < 0) {
-      newIndex = 0;
-    } else if (newIndex >= React.Children.count(children)) {
       newIndex = React.Children.count(children) - 1;
+    } else if (newIndex >= React.Children.count(children)) {
+      newIndex = 0;
     }
     setActiveIndex(newIndex);
   };
+  useEffect(() => {
+    setActiveIndex((state) => {
+      return state;
+    });
+  }, [activeIndex]);
   return (
     <>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden relative">
+        <div className="absolute top-0 bottom-0 w-20 text-center  left-0 z-50  hover:bg-gradient-to-r from-[#00000067] to-[#0000002d] hover:transition-all duration-[0.3s]">
+          <div className="h-full w-full flex justify-center items-center">
+            <i
+              className="bx bxs-chevron-left text-[50px] text-white text-center cursor-pointer"
+              onClick={() => updateIndex(activeIndex - 1)}
+            ></i>
+          </div>
+        </div>
+        <div className="absolute top-0 bottom-0 w-20  text-center right-0 z-50 hover:bg-gradient-to-l from-[#00000067] to-[#0000002d]">
+          <div className="h-full w-full flex justify-center items-center">
+            <i
+              className="bx bxs-chevron-right text-[50px] text-white cursor-pointer"
+              onClick={() => updateIndex(activeIndex + 1)}
+            ></i>
+          </div>
+        </div>
         <div
           className={`whitespace-nowrap transition-all duration-[0.3s] -translate-x-[${
             activeIndex * 100
@@ -37,31 +60,19 @@ const Carousel = ({ children }) => {
             return React.cloneElement(child, { width: "100%" });
           })}
         </div>
-        <div className="flex items-center justify-center gap-2">
-          <button
-            className="bg-teal-500 p-2 rounded-[50%] text-white"
-            onClick={() => updateIndex(activeIndex - 1)}
-          >
-            <i className="bx bxs-chevron-left"></i>
-          </button>
+        <div className="flex items-center justify-center  gap-2 absolute top-[90%] left-[48%] z-10">
           {React.Children.map(children, (child, index) => {
             return (
               <button
                 className={`p-2 rounded-[80%] text-white active:bg-purple-500 ${
-                  index === activeIndex ? "bg-purple-500" : "bg-teal-500"
-                }`}
+                  index === activeIndex ? "border-2 bg-purple-500" : "bg-white"
+                } justify-center items-center`}
                 onClick={() => updateIndex(index)}
               >
-                {index + 1}
+                {/* {index + 1} */}
               </button>
             );
           })}
-          <button
-            className="bg-teal-500 p-2 rounded-[50%] text-white"
-            onClick={() => updateIndex(activeIndex + 1)}
-          >
-            <i className="bx bxs-chevron-right"></i>
-          </button>
         </div>
       </div>
     </>

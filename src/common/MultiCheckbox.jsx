@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import MultiCheckAtom from "../recoil/MultiCheckAtom";
+import "boxicons";
 
 const MultiCheckbox = () => {
   const [items, setItems] = useRecoilState(MultiCheckAtom);

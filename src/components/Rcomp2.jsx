@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel, { CarouselItem } from "../common/Carousel";
+import "boxicons";
 
 const Rcomp2 = () => {
   return (
