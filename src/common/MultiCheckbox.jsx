@@ -98,7 +98,7 @@ const MultiCheckbox = () => {
   }, [checkedState, isChecked, count]);
   return (
     <>
-      <div className="border rounder p-3">
+      <div className="border rounded p-3">
         <div className="py-2 flex gap-3 items-center text-center">
           <i
             className="bx bxs-pizza"
@@ -131,7 +131,7 @@ const MultiCheckbox = () => {
         </div>
         <div className="mt-1 align-text-bottom">
           {items.map((data, idx) => (
-            <div className="flex p-2 gap-1 items-center text-left">
+            <div className="flex p-2 gap-1 items-center text-left" key={idx}>
               <input
                 type="checkbox"
                 className="cursor-pointer"
@@ -163,13 +163,12 @@ const MultiCheckbox = () => {
           </div>
         </div>
         <div className="flex">
-          <a
-            href="#"
+          <button
             className="no-underline px-3 py-2 bg-teal-500 rounded text-white"
             onClick={clearAll}
           >
             Clear All
-          </a>
+          </button>
         </div>
       </div>
     </>

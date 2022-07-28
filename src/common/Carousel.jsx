@@ -14,12 +14,10 @@ export const CarouselItem = ({ children, width }) => {
   );
 };
 const Carousel = ({ children }) => {
-  console.log("Children", children);
   const [activeIndex, setActiveIndex] = useState(0);
 
   // updating index for updating activeIndex state value to activate translate into 0, 100 and 200 respectively
   const updateIndex = (newIndex) => {
-    console.log("checking the new index", newIndex);
     if (newIndex < 0) {
       newIndex = React.Children.count(children) - 1;
     } else if (newIndex >= React.Children.count(children)) {
@@ -47,7 +45,7 @@ const Carousel = ({ children }) => {
         clearInterval(interval);
       }
     };
-  }, [activeIndex, paused]);
+  });
   return (
     <>
       <div className="flex">
@@ -74,15 +72,16 @@ const Carousel = ({ children }) => {
             ></i>
           </div>
         </div>
+
         <div
-          className={`whitespace-nowrap transition-all duration-[0.3s] -translate-x-[${
-            activeIndex * 100
-          }%]`}
+          className={`whitespace-nowrap transition-all duration-[0.3s] `}
+          style={{ transform: `translateX(${-activeIndex * 100}%)` }}
         >
           {React.Children.map(children, (child, index) => {
             return React.cloneElement(child, { width: "100%" });
           })}
         </div>
+
         <div className="flex items-center justify-center  gap-2 absolute top-[90%] left-[48%] z-10">
           {React.Children.map(children, (child, index) => {
             return (

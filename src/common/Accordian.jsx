@@ -15,8 +15,10 @@ const Accordian = () => {
   return (
     <>
       <div className="w-full rounded p-2">
-        {myaccord.map((data) => (
-          <AccordianContent data={data} />
+        {myaccord.map((data, idx) => (
+          <div key={idx}>
+            <AccordianContent data={data} />
+          </div>
         ))}
       </div>
     </>
