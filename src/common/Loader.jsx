@@ -13,7 +13,6 @@ const Loader = () => {
       <div className="border rounded p-3 h-[400px]">
         {loading ? (
           <div className="loader-container flex w-full h-full  z-50 items-center justify-center">
-            {/* <div className="w-[64px] h-[64px] border-[8px] border-regal-blue text-center rounded-[50%] animate-spin"></div> */}
             <div>
               <div className="text-white p-2">Loading.....</div>
               <div className="spinner text-6xl"></div>

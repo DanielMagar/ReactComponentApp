@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import CircularProgressBar from "../common/CircularProgressBar";
 import Loader from "../common/Loader";
 import ProgressBar from "../common/ProgressBar";
 import ProgressBarSigle from "../common/ProgressBarSigle";
@@ -17,7 +18,7 @@ const Rcomp3 = () => {
 
   const [completed, setCompleted] = useState(0);
   useEffect(() => {
-    setInterval(() => setCompleted(Math.floor(Math.random() * 100) + 1), 2000);
+    setInterval(() => setCompleted(Math.floor(Math.random() * 100) + 1), 5000);
   }, []);
   return (
     <>
@@ -53,7 +54,9 @@ const Rcomp3 = () => {
           </div>
         </div>
         <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
-          <div className="w-full">Progress Bar Rounded</div>
+          <div className="w-full">
+            <CircularProgressBar bgcolor="#6a1b9a" completed={completed} />
+          </div>
         </div>
         <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
           <div className="w-full">Multi Checkbox</div>
