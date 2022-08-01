@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Rcomp1 from "./components/Rcomp1";
 import Rcomp2 from "./components/Rcomp2";
 import Rcomp3 from "./components/Rcomp3";
+import Rcomp4 from "./components/Rcomp4";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Rcomp2 />
       <Rcomp1 />
       <Rcomp3 />
+      <Rcomp4 />
     </>
   );
 }

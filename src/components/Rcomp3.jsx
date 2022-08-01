@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import CircularLoader from "../common/CircularLoader";
 import CircularProgressBar from "../common/CircularProgressBar";
 import Loader from "../common/Loader";
 import ProgressBar from "../common/ProgressBar";
@@ -59,7 +60,9 @@ const Rcomp3 = () => {
           </div>
         </div>
         <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
-          <div className="w-full">Multi Checkbox</div>
+          <div className="w-full ">
+            <CircularLoader />
+          </div>
         </div>
       </div>
     </>

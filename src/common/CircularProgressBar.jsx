@@ -5,7 +5,7 @@ const CircularProgressBar = (props) => {
 
   const [progress, setProgress] = useState(0);
   useEffect(() => {
-    setInterval(() => setProgress(progress + 1), 2000);
+    setInterval(() => setProgress(progress + 1), 1000);
   }, [progress]);
 
   function addStylesheetRules(rules) {
@@ -28,6 +28,7 @@ const CircularProgressBar = (props) => {
       return state;
     });
   }, [progress]);
+
   let style = {
     animationName: animationName,
     animationDuration: "4s",
@@ -36,14 +37,15 @@ const CircularProgressBar = (props) => {
   };
   return (
     <>
-      <div className="h-full flex items-center justify-center">
-        <div className="main-cirle ">
+      <div>Circular progress bar using svg</div>
+      <div className="h-full flex items-center justify-center translate-y-[80%]">
+        <div className="main-cirle">
           <div className="outer">
             <div className="inner">
               <div className="number">{progress}%</div>
             </div>
           </div>
-          <svg height="160px" width="160px">
+          <svg className="circle-progress" height="160px" width="160px">
             <defs>
               <linearGradient id="GradientColor">
                 <stop offset="0%" stop-color="#e91e63" />
