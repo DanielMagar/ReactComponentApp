@@ -1,6 +1,7 @@
 import React from "react";
 import APIfetchedLoader from "../common/APIfetchedLoader";
 import CircularProgressBarWithCss from "../common/CircularProgressBarWithCss";
+import Sliders from "../common/Sliders";
 
 const Rcomp4 = () => {
   return (
@@ -17,7 +18,10 @@ const Rcomp4 = () => {
           </div>
         </div>
         <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
-          <div className="w-full">Accordian</div>
+          <div className="w-full">
+            Range Sliders
+            <Sliders />
+          </div>
         </div>
         <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
           <div className="w-full">Multi Checkbox</div>

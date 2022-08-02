@@ -175,3 +175,85 @@ circle {
 .progressvalue {
   position: relative;
 }
+.range {
+  accent-color: #00b8a7;
+}
+
+.buble {
+  position: relative;
+  display: inline-block;
+  margin: 10px 0;
+}
+.buble .tooltiptext {
+  /* width: 40%; */
+  padding: 3px 8px;
+  background-color: #00b8a7;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  z-index: 1;
+}
+/* input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 20px;
+
+  background: #00b8a7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+} */
+.buble .tooltiptext::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+
+  border-color: #00b8a7 transparent transparent transparent;
+}
+
+.slider {
+  position: relative;
+  z-index: 1;
+  height: 10px;
+}
+.slider .track {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background-color: #c6aee7;
+}
+.slider .range {
+  position: absolute;
+  z-index: 2;
+  background-color: #6200ee;
+  left: 25%;
+  right: 25%;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+}
+.slider > .thumb {
+  position: absolute;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+  background-color: #6200ee;
+  border-radius: 50%;
+  opacity: 3;
+}
+.slider > .thumb.left {
+  left: 25%;
+  transform: translate(-15px, -10px);
+}
+.slider > .thumb.right {
+  right: 25%;
+  transform: translate(15px, -10px);
+}
