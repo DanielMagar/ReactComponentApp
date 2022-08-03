@@ -1,6 +1,7 @@
 import React from "react";
 import APIfetchedLoader from "../common/APIfetchedLoader";
 import CircularProgressBarWithCss from "../common/CircularProgressBarWithCss";
+import Parallax from "../common/Parallax";
 import Sliders from "../common/Sliders";
 
 const Rcomp4 = () => {
@@ -24,7 +25,10 @@ const Rcomp4 = () => {
           </div>
         </div>
         <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
-          <div className="w-full">Multi Checkbox</div>
+          <div className="w-full">
+            Parallex
+            <Parallax />
+          </div>
         </div>
       </div>
     </>

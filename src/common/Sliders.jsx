@@ -21,7 +21,7 @@ const Sliders = () => {
           <div className="buble">
             <span
               className="tooltiptext"
-              //   className={`tooltiptext ${hoverStatus ? "block" : "hidden"} `}
+              // className={`tooltiptext ${hoverStatus ? "block" : "hidden"} `}
             >
               {value}
             </span>

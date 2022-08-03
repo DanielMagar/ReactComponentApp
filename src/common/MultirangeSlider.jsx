@@ -99,15 +99,15 @@ const MultirangeSlider = ({ min, max, onChange }) => {
                   event.target.value = value.toString();
                   console.log("lllalalla", event.target.value);
                 }}
-                className="thumb thumb--zindex-4"
+                className="thumb thumb--zindex-4 thumb-my"
               />
 
               <div className="slider">
                 <div className="slider__track" />
                 <div ref={range} className="slider__range" />
 
-                <div className="slider__left-value">{minVal}</div>
-                <div className="slider__right-value">{maxVal}</div>
+                <div className="slider__left-value tooltip">{minVal}</div>
+                <div className="slider__right-value tooltip">{maxVal}</div>
               </div>
             </div>
           </div>
