@@ -1,5 +1,6 @@
 import { hover } from "@testing-library/user-event/dist/hover";
 import React, { useState, useEffect } from "react";
+import MultirangeSlider from "./MultirangeSlider";
 
 const Sliders = () => {
   const [value, onChange] = useState(0);
@@ -11,6 +12,7 @@ const Sliders = () => {
       ele.style.left = `${Number(value / 0.25)}px`;
     }
   });
+
   return (
     <>
       <div className="py-10">Single Slider</div>
@@ -42,32 +44,13 @@ const Sliders = () => {
           />
         </div>
       </div>
-      <div className="w-full">
+      <div>
         <div className="py-14">Multi Range Slider</div>
-        <div className="flex items-center justify-center">
-          <div className="multi-range-slider">
-            <input
-              className="multi-range-inp"
-              type="range"
-              id="input-left"
-              min="0"
-              max="100"
-            />
-            <input
-              className="multi-range-inp"
-              id="input-right"
-              type="range"
-              min="0"
-              max="100"
-            />
-            <div className="slider">
-              <div className="track"></div>
-              <div className="range"></div>
-              <div className="thumb left"></div>
-              <div className="thumb right"></div>
-            </div>
-          </div>
-        </div>
+        <MultirangeSlider
+          min={0}
+          max={100}
+          onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
+        />
       </div>
     </>
   );

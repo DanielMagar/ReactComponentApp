@@ -11,7 +11,7 @@ const CircularProgressBarWithCss = () => {
       if (start == end) {
         clearInterval(progress);
       }
-      console.log(start);
+      // console.log(start);
       setProgressStart(start);
     }, 100);
   }, []);
