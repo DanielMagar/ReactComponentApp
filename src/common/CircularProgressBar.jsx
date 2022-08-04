@@ -18,7 +18,7 @@ const CircularProgressBar = (props) => {
     let keyframes = `
         @-webkit-keyframes ${animationName} {
        
-            100%{stroke-dashoffset: ${progress}}
+            100%{stroke-dashoffset: 165}
            
         }`;
 
@@ -42,7 +42,7 @@ const CircularProgressBar = (props) => {
         <div className="main-cirle">
           <div className="outer">
             <div className="inner">
-              <div className="number">{progress}%</div>
+              <div className="number">60%</div>
             </div>
           </div>
           <svg className="circle-progress" height="160px" width="160px">

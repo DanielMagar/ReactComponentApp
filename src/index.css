@@ -323,3 +323,30 @@ circle {
   background-repeat: no-repeat;
   border: 1px solid purple;
 }
+
+/* Rating starts */
+.star-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.star {
+  font-size: 28px;
+  transition: transform 0.2s;
+}
+#ratingstar {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  color: rgb(125, 42, 232);
+  stroke: black;
+  -ms-transform: scale(1.4); /* IE 9 */
+  -webkit-transform: scale(1.4); /* Safari 3-8 */
+  transform: scale(1.4);
+}
+.off {
+  color: rgb(148, 148, 145);
+}
