@@ -341,7 +341,7 @@ circle {
   cursor: pointer;
 }
 .on {
-  color: rgb(125, 42, 232);
+  color: rgb(239, 175, 0);
   stroke: black;
   -ms-transform: scale(1.4); /* IE 9 */
   -webkit-transform: scale(1.4); /* Safari 3-8 */

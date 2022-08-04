@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import { BiStar } from "react-icons/bi";
 import { BsStarFill } from "react-icons/bs";
+import HalfStarRating from "./HalfStarRating";
 
 const StarRatings = () => {
   const [rating, setRating] = useState(0);
@@ -11,8 +12,8 @@ const StarRatings = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center p-5">Default </div>
-      <div className="border bg-slate-300 rounded-[6px] p-4">
+      <div className="border rounded-[6px] p-4 mb-10">
+        <div className="flex items-center justify-center">Default </div>
         <div className="star-rating">
           {[...Array(5)].map((star, idx) => {
             idx += 1;
@@ -43,7 +44,12 @@ const StarRatings = () => {
         </div>
         <div className="flex items-center justify-center">Rating: {rating}</div>
       </div>
-      <div className="border bg-slate-300 rounded-[6px] p-4"></div>
+      <div className="border  rounded-[6px] p-4">
+        <div className="flex items-center justify-center p-3">
+          Half Star Rating (Precision Ratings)
+        </div>
+        <HalfStarRating rating={5} />
+      </div>
     </>
   );
 };
