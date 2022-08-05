@@ -3,7 +3,9 @@ import React from "react";
 const CircularLoader = () => {
   return (
     <>
-      <div>Circular Loader</div>
+      <div className="bg-teal-500 p-2 text-white rounded mb-3 w-full">
+        Circular Loader
+      </div>
       <div className="flex">
         <div className="w-[100vw] flex items-center justify-center z-50 translate-y-[80%]">
           <svg

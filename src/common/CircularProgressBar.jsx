@@ -37,7 +37,9 @@ const CircularProgressBar = (props) => {
   };
   return (
     <>
-      <div>Circular progress bar using svg</div>
+      <div className="bg-teal-500 p-2 text-white rounded mb-3 w-full">
+        Circular progress bar using svg
+      </div>
       <div className="h-full flex items-center justify-center translate-y-[80%]">
         <div className="main-cirle">
           <div className="outer">

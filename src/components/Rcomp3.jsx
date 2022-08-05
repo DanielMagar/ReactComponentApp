@@ -25,19 +25,23 @@ const Rcomp3 = () => {
     <>
       <div className="grid grid-cols-4  grid-flow-row gap-4 p-4">
         <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
-          <div className=" flex items-center gap-5">
+          <div className=" flex items-center text-center gap-1">
             <button
-              className="px-3 py-2 rounded mb-2 text-white bg-teal-500"
+              className="p-2 rounded mb-2 text-white bg-teal-500 w-[30%]"
               onClick={refresh}
             >
               Click Me
             </button>
-            <div>Loading Component</div>
+            <div className="bg-teal-500 p-2 text-white rounded mb-2 w-[70%]">
+              Loading Component
+            </div>
           </div>
           <Loader />
         </div>
         <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
-          <div>Progress Bar</div>
+          <div className="bg-teal-500 p-2 text-white rounded mb-3 w-full">
+            Progress Bar
+          </div>
           <div className="flex flex-col  w-full translate-y-[50%] ">
             <div className="w-full">
               {progressData.map((data, idx) => (
