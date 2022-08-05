@@ -1,21 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
       <nav className="flex items-center justify-between bg-teal-500 p-3">
         <div className="text-white ml-24">
-          <a href="#" className="flex text-center items-center gap-4">
+          <Link to="/home" className="flex text-center items-center gap-4">
             <i className="bx bxs-component text-[50px]"></i>
             <span className="font-semibold text-xl tracking-tight">
               Custom Components
             </span>
-          </a>
+          </Link>
         </div>
 
         <div className="flex items-center justify-between gap-10 mr-28 text-white lg:flex lg:items-center lg:w-auto">
           <div className="lg:flex-grow">
-            <a href="#">Link</a>
+            <Link to="/page2">Page2</Link>
           </div>
           <div className="lg:flex-grow">
             <a href="#">Link</a>
