@@ -6,6 +6,7 @@ class HalfStarRating extends React.PureComponent {
     this.state = {
       rating: this.props.rating || null,
       temp_rating: null,
+      count: 0,
     };
   }
 
@@ -28,16 +29,18 @@ class HalfStarRating extends React.PureComponent {
     this.setState({
       rating,
       temp_rating: rating,
+      count: rating / 2 + 0.5,
     });
   }
 
   render() {
     const { rating } = this.state;
     let stars = [];
-    for (let i = 0; i < 10; i++) {
-      console.log("i", i);
 
-      let klass = "bx bx-star";
+    for (let i = 0; i < 10; i++) {
+      // console.log("i", i);
+
+      let klass = "bx bx-star text-[purple]";
       if (this.state.rating >= i && this.state.rating !== null) {
         klass = "bx bxs-star text-[purple]";
       }
@@ -63,7 +66,8 @@ class HalfStarRating extends React.PureComponent {
       <>
         <div className="flex items-center justify-center">{stars}</div>
         <div className="flex items-center justify-center">
-          Rating: {rating / 2 + 0.5}
+          {/* Rating: {rating / 2 + 0.5} */}
+          Rating: {this.state.count}
         </div>
       </>
     );
