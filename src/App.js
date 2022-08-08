@@ -13,6 +13,7 @@ function App() {
       <TopHeader />
       <Navbar />
       <Routes>
+        <Route exact path="/" element={<Home />} />
         <Route path="/page2" element={<RcompPage2 />}></Route>
         <Route path="/home" element={<Home />}></Route>
       </Routes>
