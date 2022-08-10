@@ -14,8 +14,8 @@ const Items = ({ id, description, title, img, price, quantity }) => {
           <p>{description}</p>
         </div>
         <div className="add-minus-quantity">
-          <i className="bx bx-minus minu" onClick={() => decrement(id)}></i>
-          <input type="text" className="text" placeholder={quantity} />
+          <i className="bx bx-minus minus" onClick={() => decrement(id)}></i>
+          <input type="text" className="text" placeholder={quantity} disabled />
           <i className="bx bx-plus add" onClick={() => increment(id)}></i>
         </div>
         <div className="price">

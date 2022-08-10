@@ -411,7 +411,7 @@ circle {
 header {
   width: 100%;
 
-  line-height: 10rem;
+  line-height: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 0.1rem solid #9a9191;
@@ -424,8 +424,8 @@ header {
   align-items: center;
 }
 .continue-shopping .arrow-icon {
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2rem;
+  height: 2rem;
 }
 .cart-items-container {
   width: 90%;
@@ -454,15 +454,15 @@ header {
 }
 .cart-icon p {
   position: absolute;
-  width: 3rem;
-  height: 3rem;
-  right: -1.2rem;
-  top: 1.7rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  right: -0.2rem;
+  top: 0.1rem;
   border-radius: 50%;
   background: #99cbf7;
   color: #fff;
   box-sizing: border-box;
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -506,7 +506,7 @@ header {
 }
 .items-info {
   width: 100%;
-  height: 11rem;
+  height: 8rem;
   /* background-color: lavender; */
   margin: auto;
   display: grid;
@@ -514,8 +514,8 @@ header {
 }
 
 .items-info .product-img img {
-  width: 16rem;
-  height: 11rem;
+  width: 10rem;
+  height: 8rem;
   filter: drop-shadow(0rem 0.4rem 1rem #f1f7ff);
   border-radius: 1rem;
 }
@@ -528,7 +528,7 @@ header {
 .items-info .title h2 {
   font-style: normal;
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   text-transform: capitalize;
@@ -538,7 +538,7 @@ header {
 .items-info .title p {
   font-style: normal;
   font-weight: normal;
-  font-size: 1.8rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   text-transform: capitalize;
@@ -550,6 +550,9 @@ header {
   justify-content: flex-end;
   align-items: center;
 }
+.add-minus-quantity i {
+  cursor: pointer;
+}
 .add-minus-quantity button {
   border: none;
   background-color: transparent;
@@ -557,13 +560,13 @@ header {
   cursor: pointer;
 }
 .add-minus-quantity input {
-  width: 6rem;
-  height: 3rem;
+  width: 4rem;
+  height: 2rem;
   border: 0.141rem solid var(--primary-color);
   box-sizing: border-box;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.6rem;
+  font-size: 1rem;
   text-align: center;
   text-transform: capitalize;
   color: var(--primary-color);
@@ -583,7 +586,7 @@ header {
 .price h3 {
   font-style: normal;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-transform: capitalize;
   color: var(--main);
 }
@@ -600,7 +603,7 @@ header {
   margin-right: 5rem;
 }
 .remove {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: rgb(247, 74, 74);
   cursor: pointer;
 }
@@ -617,7 +620,7 @@ header {
 
 .card-total h3 {
   font-style: 200;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 2rem;
   text-transform: capitalize;
   color: #606166;
@@ -626,7 +629,7 @@ header {
 .card-total h3 span {
   font-style: normal;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 3.2rem;
   text-transform: capitalize;
   color: #000000;

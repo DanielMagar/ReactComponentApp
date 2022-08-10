@@ -1,4 +1,4 @@
-import React, { useState, createContext, useReducer } from "react";
+import React, { useState, createContext, useReducer, useEffect } from "react";
 import LeftArrow from "../images/LeftArrow.png";
 import { products } from "./Product";
 import ContextCart from "./ContextCart";
@@ -38,7 +38,11 @@ const Cart = () => {
       payload: id,
     });
   };
-
+  useEffect(() => {
+    dispatch({ type: "GET_TOTAL" });
+    console.log("Awesome!!");
+  }, [state.item]);
+  useEffect(() => {}, []);
   return (
     <CartContext.Provider
       value={{ ...state, removeItem, clearCart, increment, decrement }}

@@ -29,18 +29,37 @@ export const reducer = (state, action) => {
     return { ...state, item: updatedCart };
   }
   if (action.type === "DECREMENT") {
-    let updatedCart = state.item.map((curElem) => {
-      if (curElem.id === action.payload) {
-        return {
-          ...curElem,
-          quantity: curElem.quantity - 1,
-        };
-      }
+    let updatedCart = state.item
+      .map((curElem) => {
+        if (curElem.id === action.payload) {
+          return {
+            ...curElem,
+            quantity: curElem.quantity - 1,
+          };
+        }
 
-      return curElem;
-    });
+        return curElem;
+      })
+      .filter((curElem) => {
+        return curElem.quantity !== 0;
+      });
     return { ...state, item: updatedCart };
   }
-
+  if (action.type === "GET_TOTAL") {
+    let { totalItem, totalAmount } = state.item.reduce(
+      (accum, curVal) => {
+        let { quantity, price } = curVal;
+        let updatedTotalAmount = price * quantity;
+        accum.totalItem += quantity;
+        accum.totalAmount += updatedTotalAmount;
+        return accum;
+      },
+      {
+        totalItem: 0,
+        totalAmount: 0,
+      }
+    );
+    return { ...state, totalItem, totalAmount };
+  }
   return state;
 };

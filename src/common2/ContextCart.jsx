@@ -5,7 +5,7 @@ import { products } from "./Product";
 import { CartContext } from "./Cart";
 
 const ContextCart = ({ LeftArrow }) => {
-  const { item, clearCart } = useContext(CartContext);
+  const { item, clearCart, totalItem, totalAmount } = useContext(CartContext);
   if (item.length === 0) {
     return (
       <>
@@ -18,14 +18,14 @@ const ContextCart = ({ LeftArrow }) => {
             </div>
             <div className="cart-icon">
               <i className="bx bxs-cart-alt " />
-              <p>0</p>
+              <p>{totalItem}</p>
             </div>
           </header>
           <section className="main-cart-section">
             <h1>Shopping Cart</h1>
             <p className="total-items">
-              You have <span className="total-items-count">0</span> items in
-              shopping cart
+              You have <span className="total-items-count">{totalItem}</span>
+              items in shopping cart
             </p>
           </section>
         </div>
@@ -35,7 +35,9 @@ const ContextCart = ({ LeftArrow }) => {
   return (
     <>
       <div className="border-4 mt-5 h-auto shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full">
-        <div>Cart</div>
+        <div className="border p-2 bg-teal-500 text-white rounded-[4px]">
+          Shopping Cart Demo
+        </div>
         <header>
           <div className="continue-shopping">
             <img src={LeftArrow} alt="arrow" className="arrow-icon" />
@@ -43,14 +45,14 @@ const ContextCart = ({ LeftArrow }) => {
           </div>
           <div className="cart-icon">
             <i className="bx bxs-cart-alt " />
-            <p>7</p>
+            <p>{totalItem}</p>
           </div>
         </header>
         <section className="main-cart-section">
           <h1>Shopping Cart</h1>
           <p className="total-items">
-            You have <span className="total-items-count">7</span> items in
-            shopping cart
+            You have <span className="total-items-count">{totalItem}</span>{" "}
+            items in shopping cart
           </p>
 
           <div className="cart-items">
@@ -64,7 +66,7 @@ const ContextCart = ({ LeftArrow }) => {
           </div>
           <div className="card-total mb-10 ">
             <h3>
-              Cart Total: <span>22000rs</span>
+              Cart Total: <span>{totalAmount} &#x20B9;</span>
             </h3>
             <button>Checkout</button>
             <button className="clear-cart" onClick={clearCart}>
