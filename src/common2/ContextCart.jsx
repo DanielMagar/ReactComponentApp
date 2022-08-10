@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Scrollbars } from "react-custom-scrollbars-2";
 import Items from "./Items";
-import { products } from "./Product";
 import { CartContext } from "./Cart";
 
 const ContextCart = ({ LeftArrow }) => {

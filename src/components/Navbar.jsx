@@ -16,10 +16,10 @@ const Navbar = () => {
 
         <div className="flex items-center justify-between gap-10 mr-28 text-white lg:flex lg:items-center lg:w-auto">
           <div className="lg:flex-grow">
-            <Link to="/page2">Page2</Link>
+            <Link to="/page2">ComponentsII</Link>
           </div>
           <div className="lg:flex-grow">
-            <a href="#">Link</a>
+            <Link to="/page3">ComponentIII</Link>
           </div>
           <div className="lg:flex-grow">
             <a href="#">Link</a>

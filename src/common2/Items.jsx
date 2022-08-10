@@ -19,7 +19,7 @@ const Items = ({ id, description, title, img, price, quantity }) => {
           <i className="bx bx-plus add" onClick={() => increment(id)}></i>
         </div>
         <div className="price">
-          <h3>{price}</h3>
+          <h3>{price} &#x20B9;</h3>
         </div>
         <div className="remove-item">
           <i

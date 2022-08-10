@@ -1,7 +1,6 @@
 import React from "react";
 import APIfetchedLoader from "../common/APIfetchedLoader";
 import CircularProgressBarWithCss from "../common/CircularProgressBarWithCss";
-import Parallax from "../common/Parallax";
 import StarRatings from "../common/StarRatings";
 import Sliders from "../common/Sliders";
 
