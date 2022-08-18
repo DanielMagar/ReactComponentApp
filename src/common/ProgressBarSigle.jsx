@@ -3,7 +3,7 @@ import React from "react";
 const ProgressBarSigle = (props) => {
   return (
     <>
-      <div className="h-[20px] w-full bg-slate-300 border rounded-[50px] mt-6">
+      <div className="h-[20px]  w-full bg-slate-300 border rounded-[50px] mt-6">
         <div
           style={{
             height: "100%",

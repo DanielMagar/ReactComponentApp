@@ -7,12 +7,14 @@ import { Routes, Route } from "react-router-dom";
 import RcompPage2 from "./components/RcompPage2";
 import Home from "./components/Home";
 import Page3 from "./common3/Page3";
+import Nav from "./components/Nav";
 
 function App() {
   return (
     <>
       <TopHeader />
       <Navbar />
+
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/page2" element={<RcompPage2 />}></Route>

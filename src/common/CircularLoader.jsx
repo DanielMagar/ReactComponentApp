@@ -7,7 +7,7 @@ const CircularLoader = () => {
         Circular Loader
       </div>
       <div className="flex">
-        <div className="w-[100vw] flex items-center justify-center z-50 translate-y-[80%]">
+        <div className="w-[100vw] flex items-center justify-center z-50 translate-y-[80%] sm:translate-y-[50%]">
           <svg
             class="svgLoader"
             viewBox="0 0 100 100"

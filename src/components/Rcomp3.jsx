@@ -23,8 +23,11 @@ const Rcomp3 = () => {
   }, []);
   return (
     <>
-      <div className="grid grid-cols-4  grid-flow-row gap-4 p-4">
-        <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
+      <div className="grid grid-cols-4  grid-flow-row gap-4 p-4 sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-4 ">
+        <div
+          className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full "
+          data-aos="flip-left"
+        >
           <div className=" flex items-center text-center gap-1">
             <button
               className="p-2 rounded mb-2 text-white bg-teal-500 w-[30%]"
@@ -38,7 +41,10 @@ const Rcomp3 = () => {
           </div>
           <Loader />
         </div>
-        <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
+        <div
+          className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full sm:h-[500px]"
+          data-aos="flip-up"
+        >
           <div className="bg-teal-500 p-2 text-white rounded mb-3 w-full">
             Progress Bar
           </div>
@@ -58,12 +64,18 @@ const Rcomp3 = () => {
             </div>
           </div>
         </div>
-        <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
-          <div className="w-full">
+        <div
+          className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full sm:h-[500px]"
+          data-aos="flip-down"
+        >
+          <div className="w-full ">
             <CircularProgressBar bgcolor="#6a1b9a" completed={completed} />
           </div>
         </div>
-        <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
+        <div
+          className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full sm:h-[500px]"
+          data-aos="flip-right"
+        >
           <div className="w-full ">
             <CircularLoader />
           </div>

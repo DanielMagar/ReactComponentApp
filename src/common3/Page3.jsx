@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import reactImg from "../images/React-icon.png";
+import AnimateText from "./AnimateText";
 
 const Page3 = () => {
   const [loading, setLoading] = useState(false);
@@ -11,7 +12,7 @@ const Page3 = () => {
   }, []);
   return (
     <>
-      <div className="grid grid-cols-3  grid-flow-row gap-4 p-4">
+      <div className="grid   grid-flow-row gap-4 p-4 sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-2">
         <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
           <div className="text-[26px] font-thin">Skeleton Loading...</div>
           <hr className="mt-5 mb-5" />
@@ -53,10 +54,12 @@ const Page3 = () => {
           )}
         </div>
         <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
-          <div className="w-full"></div>
+          <div className="w-full">Waiting...</div>
         </div>
-        <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full ">
-          <div className="w-full"></div>
+      </div>
+      <div className="grid   grid-flow-row gap-4 p-4 sm:grid-cols-1 md:grid-cols-1  lg:grid-cols-1">
+        <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full bg-[#ffffff] animated-page h-[1000px]  border">
+          <AnimateText />
         </div>
       </div>
     </>
