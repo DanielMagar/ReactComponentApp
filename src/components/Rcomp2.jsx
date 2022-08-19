@@ -14,7 +14,7 @@ const Rcomp2 = () => {
           <div>
             <Carousel>
               <CarouselItem>
-                <div className="h-full bg-[url('images/1.jpg')]  w-full bg-cover bg-center"></div>
+                <div className="h-full bg-[url('images/1.jpg')]  w-full bg-cover bg-center "></div>
                 {/* <img
                   src={firstImage}
                   alt="firstImage"

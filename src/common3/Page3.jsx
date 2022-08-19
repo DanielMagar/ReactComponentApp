@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import reactImg from "../images/React-icon.png";
-import AnimateText from "./AnimateText";
+import ImageGallary from "./ImageGallary";
 
 const Page3 = () => {
   const [loading, setLoading] = useState(false);
@@ -58,8 +58,8 @@ const Page3 = () => {
         </div>
       </div>
       <div className="grid   grid-flow-row gap-4 p-4 sm:grid-cols-1 md:grid-cols-1  lg:grid-cols-1">
-        <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full bg-[#ffffff] animated-page h-[1000px]  border">
-          <AnimateText />
+        <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] p-4 w-full bg-[#ffffff] animated-page h-[auto]  border">
+          <ImageGallary />
         </div>
       </div>
     </>

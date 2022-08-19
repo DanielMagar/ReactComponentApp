@@ -13,7 +13,7 @@ const Rcomp1 = () => {
     AOS.init({
       duration: 1000,
     });
-    // AOS.init();
+    // AOS.init(); without time duration
     AOS.refresh();
   }, []);
   return (
