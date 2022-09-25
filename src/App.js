@@ -9,20 +9,23 @@ import Home from "./components/Home";
 import Page3 from "./common3/Page3";
 import Nav from "./components/Nav";
 import HamHome from "./common/HamHome";
+import Form from "./common3/Form";
 
 function App() {
   return (
     <>
-      <HamHome />
-      {/* <TopHeader />
+      {/* <HamHome /> */}
+      <TopHeader />
       <Navbar />
 
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/page2" element={<RcompPage2 />}></Route>
         <Route path="/page3" element={<Page3 />} />
+        <Route path="/page4" element={<Form />} />
+
         <Route path="/home" element={<Home />}></Route>
-      </Routes> */}
+      </Routes>
     </>
   );
 }

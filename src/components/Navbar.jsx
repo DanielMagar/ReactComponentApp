@@ -89,7 +89,7 @@ const Navbar = () => {
             <Link to="/page3">ComponentIII</Link>
           </div>
           <div className="lg:flex-grow">
-            <a href="#">Link</a>
+            <Link to="/page4">ComponentIV</Link>
           </div>
           <div className="lg:flex-grow">
             <a href="#">Link</a>
